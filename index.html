@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Celebration</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- MAIN CARD -->
+  <div class="welcome-card" id="main-card">
+    <h1>Happy Birthday!</h1>
+    <div id="countdown">Loading...</div>
+    <div id="buttons" style="display:none;">
+      <button id="btn-messages">Open Celebration</button>
+      <button id="btn-chithi">চিঠি</button>
+      <button id="btn-birthday">Birthday Girl</button>
+    </div>
+  </div>
+
+  <!-- MESSAGES SECTION -->
+  <div class="section" id="messages-section">
+    <button class="back-btn" onclick="showSection('main')">← Back</button>
+    <h2>Special Messages</h2>
+    <div class="messages" id="messages">You are awesome! 🎉</div>
+    <button class="next-btn" id="next-msg">Next</button>
+    <div class="gallery" id="gallery">
+      <img src="assets\images\img1.jpg" alt="Her">
+      <img src="assets\images\img2.jpg" alt="We">
+      <img src="assets\images\img3.jpg" alt="SHe">
+    </div>
+    <div class="music-player">
+      <audio controls autoplay loop>
+        <source src="assets\audio\song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <!-- CHITHI SECTION -->
+  <div class="section" id="chithi-section">
+    <button class="back-btn" onclick="showSection('main')">← Back</button>
+    <h2>Special Notes</h2>
+    <div class="messages" id="chithi-messages">Note 1:Eto Note fote lekhar mto brain apatoto nai...coding kri matha nosto ✨</div>
+    <button class="next-btn" id="next-chithi">Next</button>
+  </div>
+
+  <!-- BIRTHDAY VIDEO SECTION -->
+  <div class="section" id="birthday-section">
+    <button class="back-btn" onclick="showSection('main')">← Back</button>
+    <video class="video-player" id="birthday-video" controls>
+      <source src="assets\video\birthday.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+</div>
+
+<canvas class="confetti" id="confetti"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
